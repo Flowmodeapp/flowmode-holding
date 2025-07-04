@@ -1,11 +1,22 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Script from 'next/script';
 
 const App = () => {
+  // Fix mobile height using CSS variable
+  useEffect(() => {
+    const setHeight = () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+    setHeight();
+    window.addEventListener('resize', setHeight);
+    return () => window.removeEventListener('resize', setHeight);
+  }, []);
+
   return (
-    <main className="relative w-screen h-screen overflow-hidden bg-black text-white font-inter">
+    <main className="relative w-screen overflow-hidden bg-black text-white font-inter" style={{ height: 'calc(var(--vh, 1vh) * 100)' }}>
 
       {/* Tailwind CSS CDN */}
       <Script src="https://cdn.tailwindcss.com" strategy="afterInteractive" />
@@ -33,7 +44,7 @@ const App = () => {
         }}
       />
 
-      {/* Responsive Background Image (non-stretched) */}
+      {/* Background Image (responsive) */}
       <div className="absolute inset-0 z-0">
         <img
           src="/images/bg_spaceorbs.png"
@@ -42,7 +53,7 @@ const App = () => {
         />
       </div>
 
-      {/* Logo top center */}
+      {/* Logo */}
       <div className="absolute top-8 left-1/2 transform -translate-x-1/2 flex items-center gap-1 z-10">
         <img
           src="/images/orb_main.png"
@@ -54,7 +65,7 @@ const App = () => {
         <span className="text-2xl md:text-3xl font-bold tracking-tight">Flowmode</span>
       </div>
 
-      {/* Slogan – responsive position and alignment */}
+      {/* Slogan */}
       <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 text-center z-10 px-4 w-full md:bottom-16 md:left-auto md:right-12 md:transform-none md:text-right md:w-auto">
         <p className="text-xl md:text-3xl leading-relaxed text-white drop-shadow-lg">
           Escape the noise.<br />
