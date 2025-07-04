@@ -46,7 +46,7 @@ const App = () => {
         }}
       />
 
-      {/* Background Image (mobile: object-cover for zoom fill, desktop: object-contain) */}
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
           src="/images/bg_spaceorbs.png"
@@ -67,9 +67,9 @@ const App = () => {
         <span className="text-2xl md:text-3xl font-bold tracking-tight">Flowmode</span>
       </div>
 
-      {/* Slogan (right-aligned on all screens, slightly higher and smaller on mobile) */}
-      <div className="absolute bottom-24 right-6 z-10 max-w-sm text-right md:bottom-16 md:right-12">
-        <p className="text-base sm:text-lg md:text-2xl leading-relaxed text-white drop-shadow-lg">
+      {/* Slogan – slightly lower & larger on mobile */}
+      <div className="absolute bottom-20 sm:bottom-24 md:bottom-16 right-6 z-10 max-w-sm text-right sm:right-8 md:right-12">
+        <p className="text-lg sm:text-xl md:text-2xl leading-relaxed text-white drop-shadow-lg">
           Escape the noise.<br />
           <span className="font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             Enter Flowmode.
