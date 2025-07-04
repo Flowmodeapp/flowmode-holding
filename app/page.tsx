@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import Script from 'next/script';
 
 const App = () => {
-  // Fix mobile height using CSS variable
+  // Set dynamic viewport height for mobile
   useEffect(() => {
     const setHeight = () => {
       const vh = window.innerHeight * 0.01;
@@ -16,9 +16,11 @@ const App = () => {
   }, []);
 
   return (
-    <main className="relative w-screen overflow-hidden bg-black text-white font-inter" style={{ height: 'calc(var(--vh, 1vh) * 100)' }}>
-
-      {/* Tailwind CSS CDN */}
+    <main
+      className="relative w-screen overflow-hidden bg-black text-white font-inter"
+      style={{ height: 'calc(var(--vh, 1vh) * 100)' }}
+    >
+      {/* Tailwind CDN */}
       <Script src="https://cdn.tailwindcss.com" strategy="afterInteractive" />
 
       {/* Google Fonts - Inter */}
@@ -44,16 +46,16 @@ const App = () => {
         }}
       />
 
-      {/* Background Image (responsive) */}
+      {/* Background Image (mobile: object-cover for zoom fill, desktop: object-contain) */}
       <div className="absolute inset-0 z-0">
         <img
           src="/images/bg_spaceorbs.png"
           alt="Starry Orbs Background"
-          className="w-full h-full object-contain sm:object-cover"
+          className="w-full h-full object-cover md:object-contain"
         />
       </div>
 
-      {/* Logo */}
+      {/* Logo Top Center */}
       <div className="absolute top-8 left-1/2 transform -translate-x-1/2 flex items-center gap-1 z-10">
         <img
           src="/images/orb_main.png"
@@ -65,9 +67,9 @@ const App = () => {
         <span className="text-2xl md:text-3xl font-bold tracking-tight">Flowmode</span>
       </div>
 
-      {/* Slogan */}
-      <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 text-center z-10 px-4 w-full md:bottom-16 md:left-auto md:right-12 md:transform-none md:text-right md:w-auto">
-        <p className="text-xl md:text-3xl leading-relaxed text-white drop-shadow-lg">
+      {/* Slogan (right-aligned on all screens, slightly higher and smaller on mobile) */}
+      <div className="absolute bottom-24 right-6 z-10 max-w-sm text-right md:bottom-16 md:right-12">
+        <p className="text-base sm:text-lg md:text-2xl leading-relaxed text-white drop-shadow-lg">
           Escape the noise.<br />
           <span className="font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             Enter Flowmode.
@@ -75,7 +77,6 @@ const App = () => {
           Your guide is near.
         </p>
       </div>
-
     </main>
   );
 };
