@@ -1,6 +1,7 @@
 'use client'; // This directive marks the component as a Client Component
 
 import React from 'react';
+import Script from 'next/script'
 
 // Main App component for the holding page
 const App = () => {
@@ -8,7 +9,7 @@ const App = () => {
     // Main container for the entire page, covering the full screen
     <main className="relative w-screen h-screen overflow-hidden bg-black text-white font-inter">
       {/* Tailwind CSS CDN for styling */}
-      <script src="https://cdn.tailwindcss.com"></script>
+      <Script src="https://cdn.tailwindcss.com" strategy="afterInteractive" />
       {/* Google Fonts - Inter */}
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
 
