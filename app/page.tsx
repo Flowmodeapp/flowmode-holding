@@ -63,11 +63,14 @@ const App = () => {
 
       {/* Slogan at the bottom center */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center z-10 px-4"> {/* Adjusted bottom position */}
-        <p className="text-xl md:text-2xl leading-relaxed text-white">
-          Escape the noise.<br />
-          <span className="font-bold">Enter Flowmode.</span><br />
-          <span >A guide is coming.</span>
-        </p>
+       <p className="text-xl md:text-2xl leading-relaxed text-white drop-shadow-md text-center">
+  Escape the noise.<br />
+  <span className="font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+    Enter Flowmode.
+  </span><br />
+  A guide is coming.
+</p>
+
       </div>
     </main>
   );
