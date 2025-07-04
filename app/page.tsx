@@ -51,7 +51,7 @@ const App = () => {
         <img
           src="/images/bg_spaceorbs.png"
           alt="Starry Orbs Background"
-          className="w-full h-full object-contain md:object-cover"
+          className="absolute inset-0 w-full h-full object-cover"
         />
       </div>
 
