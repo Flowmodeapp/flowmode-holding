@@ -51,7 +51,7 @@ const App = () => {
         <img
           src="/images/bg_spaceorbs.png"
           alt="Starry Orbs Background"
-          className="w-full h-full object-cover md:object-contain"
+          className="w-full h-full object-contain md:object-cover"
         />
       </div>
 
