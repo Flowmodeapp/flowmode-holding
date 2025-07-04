@@ -55,15 +55,16 @@ const App = () => {
       </div>
 
       {/* Slogan bottom center */}
-      <div className="absolute bottom-6 md:bottom-10 left-1/2 transform -translate-x-1/2 text-center z-10 px-4">
-        <p className="text-lg md:text-2xl leading-relaxed text-white drop-shadow-md">
-          Escape the noise.<br />
-          <span className="font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            Enter Flowmode.
-          </span><br />
-          Your guide is near.
-        </p>
-      </div>
+      <div className="absolute bottom-8 right-6 md:right-12 z-10 max-w-sm text-right">
+  <p className="text-lg md:text-2xl leading-relaxed text-white drop-shadow-lg">
+    Escape the noise.<br />
+    <span className="font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+      Enter Flowmode.
+    </span><br />
+    Your guide is near.
+  </p>
+</div>
+
     </main>
   );
 };
