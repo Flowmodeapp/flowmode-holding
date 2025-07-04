@@ -68,7 +68,7 @@ const App = () => {
       </div>
 
       {/* Slogan – slightly lower & larger on mobile */}
-      <div className="absolute bottom-20 sm:bottom-24 md:bottom-16 right-6 z-10 max-w-sm text-right sm:right-8 md:right-12">
+      <div className="absolute bottom-12 sm:bottom-24 md:bottom-16 right-6 z-10 max-w-sm text-right sm:right-8 md:right-12">
         <p className="text-lg sm:text-xl md:text-2xl leading-relaxed text-white drop-shadow-lg">
           Escape the noise.<br />
           <span className="font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
