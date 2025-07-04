@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.glow-orb {
+  filter: drop-shadow(0 0 60px rgba(0, 200, 255, 0.6));
+}
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -24,4 +29,13 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.orb-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 0 80px rgba(0, 255, 255, 0.5));
 }
