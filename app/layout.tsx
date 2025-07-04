@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "Flowmode — Escape the Noise",
   description: "Join the movement. Enter Flowmode.",
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.ico",
   },
 };
 
