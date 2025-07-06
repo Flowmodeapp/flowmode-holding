@@ -60,8 +60,7 @@ const App = () => {
         <img
           src="/images/logo_flowmode.png"
           alt="Flowmode Logo"
-          className="w-[120px] sm:w-[140px] md:w-[160px]"
-        />
+          className="w-[150px] sm:w-[180px] md:w-[200px]"        />
       </div>
 
       {/* Slogan – slightly lower & larger on mobile */}
