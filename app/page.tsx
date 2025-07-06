@@ -58,7 +58,7 @@ const App = () => {
       {/* Updated Logo – Centered Orb */}
       <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-10">
         <img
-          src="/images/logo_flowmode.jpg"
+          src="/images/logo_flowmode.png"
           alt="Flowmode Logo"
           className="w-[120px] sm:w-[140px] md:w-[160px]"
         />
