@@ -55,16 +55,13 @@ const App = () => {
         />
       </div>
 
-      {/* Logo Top Center */}
-      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 flex items-center gap-1 z-10">
+      {/* Updated Logo – Centered Orb */}
+      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-10">
         <img
-          src="/images/orb_main.png"
-          alt="Flowmode Icon"
-          width={60}
-          height={60}
-          className="rounded-full"
+          src="/images/logo_flowmode.jpg"
+          alt="Flowmode Logo"
+          className="w-[120px] sm:w-[140px] md:w-[160px]"
         />
-        <span className="text-2xl md:text-3xl font-bold tracking-tight">Flowmode</span>
       </div>
 
       {/* Slogan – slightly lower & larger on mobile */}
